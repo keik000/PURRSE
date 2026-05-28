@@ -1,50 +1,66 @@
-# PURR$E: Mood-Based Expense Tracker
+🐱 PURR$E — Mood-Based Expense Tracker
+Ever noticed how your mood affects how much you spend? Sometimes when you passed a test, you buy things saying "Deserve ko man ini kay pasado ako".That is emotional spending in action. PURR$E is a small Flask web app that lets you log expenses alongside how you were feeling when you made them — whether you were happy, stressed, bored, or just hungry. Over time, you get a clearer picture of your spending habits and which emotions are doing the most damage to your wallet.
 
-## Application Description
+📌What It Does
 
-PURR$E is a standalone Python web application built with Flask, designed to help
-users track their daily expenses based on their mood and spending category.
-
-The application allows users to:
-
-- Add expenses with a description, mood, cost, and category
-- Delete expenses from any category
-- View a grand total, top spending category, and top spending mood
-- Data is saved and loaded automatically via a CSV file
-
-Built with a clean web-based interface, the system follows an
-Input → Process → Output model using Object-Oriented Programming principles.
-
-## OOP Concepts Used
-
-This project demonstrates core Object-Oriented Programming principles:
-
-- **Encapsulation:** Private attributes using `_variable` naming
-- **Abstraction:** Each class hides its internal logic behind clean method names
-- **Single Responsibility Principle (SRP):** Every class has one focused job
-
-## Technologies Used
-
-- Python (core programming language)
-- Flask (web framework)
-- CSV file handling for saving and retrieving expenses
-- HTML/CSS rendered server-side via Python strings
-
-## Project Structure
+-Log an expense with a description, your mood at the time, the amount, and a category
+-Delete any entry you've added
+-See your grand total, your top spending category, and the mood you spend the most in — all updated live
+-Everything saves to a CSV file automatically, so nothing gets lost when you close the browser
 
 
-## How to Run
+Categories
+😸🍜Food Category
+😸💊Medical Category
+😸🚐Transpo Category
+😸🏠Utilities Category
 
-1. Requirements: Python 3.x and Flask installed
-2. Install Flask:
+📌OOP Concepts Applied
 
-pip install flask 
+This project was built with clean Object-Oriented Programming in mind. Here's how each principle shows up in the code:
+>Encapsulation — Internal data like expense lists and file paths are kept private using _variable naming. You interact with them through methods, not directly.
 
-3. Run the application:
+>Single Responsibility Principle — Every class has exactly one job. InputValidator validates. CostCalculator calculates. MoodAnalyzer analyzes moods. Nobody does more than they should.
 
-python purrseapp.py
+>Open/Closed Principle — Adding a new spending category doesn't require touching any class logic. The CATEGORIES list at the top is all you need to change.
 
-4. Open your browser and go to something like:
+>Dependency Injection — MoodExpenseManager accepts an optional CSV_Data object on creation, making it easy to swap in a test file without touching the real data. This is what makes the unit tests work cleanly.
 
+📌Tech Stack
+
+- Python 3 — main language
+- Flask — handles the web routes and form submissions
+- CSV — lightweight file-based storage, no database needed
+- HTML/CSS — rendered server-side as Python strings 
+
+
+📌Project Structure
+PurrseApp/
+│
+├── purrseapp.py          
+└── purrserecord.csv
+├── tests/
+│ └── test_CostCalculator.py
+│ └── test_CSV_Data.py 
+│ └── test_InputValidator.py 
+│ └── test_Manage_Expense.py 
+│ └── test_MoodAnalyzer.py 
+│ └── test_MoodExpenseManager.py 
+  └── test_PageBuilder.py     
+
+📌How to Run It
+
+Make sure you have Python installed, then:
+1. Install Flask pip install flask
+2. Start or run the app python purrseapp.py
+3. Open your browser and go to
 http://127.0.0.1:5000
+That's it! 
+
+
+📌A Few Things Worth Noting
+
+- Descriptions and moods can't contain numbers — the validator will reject them
+- Negative costs aren't allowed either
+
 
