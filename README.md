@@ -35,18 +35,22 @@ This project was built with clean Object-Oriented Programming in mind. Here's ho
 
 
 📌Project Structure
+
+```
 PurrseApp/
 │
-├── purrseapp.py          
-└── purrserecord.csv
-├── tests/
-│ └── test_CostCalculator.py
-│ └── test_CSV_Data.py 
-│ └── test_InputValidator.py 
-│ └── test_Manage_Expense.py 
-│ └── test_MoodAnalyzer.py 
-│ └── test_MoodExpenseManager.py 
-  └── test_PageBuilder.py     
+├── purrseapp.py
+├── purrserecord.csv
+│
+└── tests/
+    ├── test_CostCalculator.py
+    ├── test_CSV_Data.py
+    ├── test_InputValidator.py
+    ├── test_Manage_Expense.py
+    ├── test_MoodAnalyzer.py
+    ├── test_MoodExpenseManager.py
+    └── test_PageBuilder.py
+```
 
 📌How to Run It
 
