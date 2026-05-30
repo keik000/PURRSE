@@ -63,7 +63,7 @@ That's it!
 
 📌A Few Things Worth Noting
 
-- Descriptions and moods can't contain numbers — the validator will reject them
+- Descriptions and moods can't contain numbers, the validator will reject them
 - Negative costs aren't allowed either
 
 
