@@ -35,7 +35,8 @@ This project was built with clean Object-Oriented Programming in mind. Here's ho
 
 
 📌Project Structure
-....
+...
+
 PurrseApp/
 │
 ├── purrseapp.py          
@@ -48,7 +49,8 @@ PurrseApp/
 │ └── test_MoodAnalyzer.py 
 │ └── test_MoodExpenseManager.py 
   └── test_PageBuilder.py   
-....
+  
+...
 
 📌How to Run It
 
