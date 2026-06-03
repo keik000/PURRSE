@@ -6,12 +6,12 @@ app      = Flask(__name__)
 CSV_FILE = "purrserecord.csv"
 
 
-class InfoInput:                                                # Ini po na class ang nagu-group san mga info na ininput san user
-    def __init__(self, description, mood, cost, category):      # 
-        self.description = description                          #
-        self.mood        = mood                                 #
-        self.cost        = cost                                 #
-        self.category    = category                             #
+class InfoInput:                                                
+    def __init__(self, description, mood, cost, category):      
+        self.description = description                          
+        self.mood        = mood                                 
+        self.cost        = cost                                 
+        self.category    = category                             
 
 
 class InputValidator:
